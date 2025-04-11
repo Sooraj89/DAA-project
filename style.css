@@ -1,0 +1,158 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.3s, color 0.3s;
+
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                    url("hehe.avif");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+
+body.light {
+  background: #f3f9f4;
+  color: #2c3e50;
+}
+
+body.dark {
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1 1 300px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.left-panel button {
+  margin-left: 10px; /* or 15px, as per your preference */
+}
+
+body.dark .left-panel,
+body.dark .right-panel {
+  background: #2c3e50;
+  color: white;
+}
+
+.left-panel:hover,
+.right-panel:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+h1, h2 {
+  text-align: center;
+}
+#algorithm,
+#greedyStrategy {
+  width: 710px; /* or any value like 100%, 15rem, etc. */
+}
+form, label, select, input, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #2ecc71;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #27ae60;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+ul li {
+  background: #ecf0f1;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.item-desc {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.item-actions {
+  text-align: center;
+}
+
+.item-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.item-actions button {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.item-actions .edit-btn {
+  background-color: #3498db;
+}
+
+.item-actions .edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.item-actions .delete-btn {
+  background-color: #e74c3c;
+}
+
+.item-actions .delete-btn:hover {
+  background-color: #c0392b;
+}
+
+
+#result ul {
+  padding-left: 20px;
+}
+
+.left-panel input,
+.left-panel select,
+.left-panel button {
+  width: 97%;
+  align-self: flex-start;
+}
+.left-panel form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* important */
+}
+

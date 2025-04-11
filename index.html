@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🛒 Grocery Item Picker</title>
+  <link rel="stylesheet" href="style.css" media="all" type="text/css">
+</head>
+<body >
+  <div class="main-wrapper">
+    <h1>🛒 Grocery Picker</h1>
+    
+    <div class="main-container">
+      <!-- LEFT: Add Items Panel -->
+      <div class="left-panel">
+        <h2>➕ Add Items</h2>
+
+        <form id="itemForm">
+          <input type="text" id="itemName" placeholder="📝 Item Name" required />
+          <input type="number" id="itemWeight" placeholder="⚖️ Weight (kg)" required />
+          <input type="number" id="itemValue" placeholder="💵 Value (₹)" required />
+          <button type="submit">➕ Add Item</button>
+        </form>
+
+        <label for="maxWeight">🧺 Max Weight (kg):</label>
+        <input type="number" id="maxWeight" placeholder="Enter weight limit" required />
+
+        <label for="algorithm">⚙️ Choose Approach:</label>
+        <select id="algorithm">
+          <option value="01">🧠 0/1 Knapsack (Dynamic)</option>
+          <option value="fractional">📉 Fractional Knapsack (Greedy)</option>
+        </select>
+
+        <div id="greedyOptions" style="display: none;">
+          <label for="greedyStrategy">📊 Greedy Strategy:</label>
+          <select id="greedyStrategy">
+            <option value="ratio">📈 Profit-to-Weight Ratio</option>
+            <option value="value">💰 Maximum Profit</option>
+            <option value="weight">⚖️ Minimum Weight</option>
+          </select>
+        </div>
+
+        <button id="calculateBtn">🧮 Calculate Best Combo</button>
+      </div>
+
+      <!-- RIGHT: Items List & Result -->
+      <div class="right-panel">
+        <h2>📦 Grocery Items</h2>
+        <ul id="itemList"></ul>
+
+        <h2>🛍️Best Selection</h2>
+        <div id="result"></div>
+      </div>
+    </div>
+  </div>
+  <div id="progressBar"><span></span></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
